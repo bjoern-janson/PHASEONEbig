@@ -265,6 +265,7 @@ The theory stays small; the experiments are allowed to get complicated.
 - [`docs/2026-08-27_EMPIRICAL_LINEAGE.md`](docs/2026-08-27_EMPIRICAL_LINEAGE.md) — detailed provenance: successive attempts to make `C_improve` causally trustworthy.
 - [`docs/CLAIM_LEDGER.md`](docs/CLAIM_LEDGER.md) — proposal, demonstrated results, provisional regularities, open questions, and explicitly unearned claims.
 - [`docs/CURRENT_BOUNDARY.md`](docs/CURRENT_BOUNDARY.md) — current diagnostic boundary around local correctness versus trajectory validity.
+- [`docs/case_studies/`](docs/case_studies/) — real-world methodological stress tests. Case-study relevance does not itself count as causal evidence for `C_improve`.
 
 ---
 
@@ -277,7 +278,6 @@ The center remains almost embarrassingly small:
 ```math
 \boxed{
 \textbf{Does adaptive feedback make the future better than it otherwise would have been?}
-}
 ```
 
 Everything else serves that question.
