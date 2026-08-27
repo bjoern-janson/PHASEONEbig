@@ -28,6 +28,30 @@ In plain language:
 
 Everything else in this repository is subordinate to that causal difference.
 
+### Causal type boundary
+
+A generic candidate comparison is not automatically `C_improve`:
+
+```math
+\boxed{
+\Delta V_{\rm transition}
+=
+V_{\rm candidate}-V_{\rm incumbent}
+}
+```
+
+```math
+\boxed{
+\Delta V_{\rm transition}
+\neq
+C_{\rm improve}
+}
+```
+
+unless the domain's matched intervention/control actually identifies the feedback-specific causal contrast above.
+
+`adaptive-loop-protocol-001` predates this notation clarification and retains the historical field name `c_improve` for its generic domain-declared candidate/incumbent viability difference. The protocol remains frozen; the semantic guardrail is that the stronger name `C_improve` is earned only when the evaluation design identifies the feedback/control counterfactual.
+
 ---
 
 ## The developmental loop
@@ -46,7 +70,7 @@ Everything else in this repository is subordinate to that causal difference.
 }
 ```
 
-This is the process description. `C_improve` is the causal score of what the process accomplished.
+This is the process description. `C_improve` is the causal score of what the process accomplished when the relevant causal contrast is identified.
 
 The loop is mechanism-agnostic. Memory, learning, representation change, authority, sequencing, planning, compression, inheritance, self-monitoring, and rule revision are possible mechanisms inside it. They are not the definition.
 
