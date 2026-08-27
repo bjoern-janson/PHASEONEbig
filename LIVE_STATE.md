@@ -1,6 +1,6 @@
 # LIVE STATE — recovery spine
 
-**Status:** authoritative recovery checkpoint after `EVENT_IDENTITY_AUDIT_001` on 2026-08-27.
+**Status:** authoritative recovery checkpoint after `EVENT_IDENTITY_AUDIT_001` on 2026-08-27. `HUMAN_OBSERVER_AUDIT_001` is already constituted and frozen, but unevaluated; no `K6` transition has occurred.
 
 Read this first if conversational state is lost. Detailed earlier lineage remains in Git history at commit `b92d44f5b83307578c302770ebee6b87b8d13b70` and in the preserved artifacts referenced below.
 
@@ -24,7 +24,7 @@ METHOD
 
 PROTOCOL
   expose candidate to declared independent future
-  compute C_improve
+  compute a domain-declared transition viability difference
   inherit / reject
 
 RESEARCH STATE
@@ -32,6 +32,42 @@ RESEARCH STATE
   localize failure
   change the next question
 ```
+
+### Notation / causal type boundary
+
+The universal survival kernel's generic comparison is:
+
+```math
+\boxed{
+\Delta V_{\rm transition}
+=
+V_{\rm candidate}-V_{\rm incumbent}
+}
+```
+
+This is **not automatically** the program's feedback-specific causal quantity:
+
+```math
+\boxed{
+\Delta V_{\rm transition}
+\neq
+C_{\rm improve}
+}
+```
+
+unless the domain's matched intervention/control contract actually identifies:
+
+```math
+\boxed{
+C_{\rm improve}(t,H,e)
+=
+V_H(S_t^{+\mathrm{AF}};e)
+-
+V_H(S_t^{\mathrm{ctrl}(AF)};e)
+}
+```
+
+`PROTOCOL-001` retains its frozen historical field name `c_improve`; this clarification does not edit or expand the protocol. It prevents generic candidate improvement from silently weakening the central causal definition.
 
 Rules:
 
@@ -80,6 +116,8 @@ dev seed13       C_improve = +0.000006240895
 fresh session73  C_improve = +0.000011606736
 cold objective52 C_improve = -0.000057729501
 ```
+
+These historical labels predate the notation clarification above; operationally they are candidate-vs-incumbent viability differences on the named evaluation surfaces unless a feedback-specific matched control is separately constituted.
 
 Conclusion: candidate relation remains open; lexical coverage implementation died.
 
@@ -240,6 +278,54 @@ primitive mathematical-act identity -> insufficient
 
 The next legal operation remains **DISTINGUISH**, not TRANSFORM. The open question must move deeper than either target-word relevance or this hand-constituted mathematical-act taxonomy.
 
+## Pending constituted operation — HUMAN_OBSERVER_AUDIT_001
+
+The next DISTINGUISH assay has already been constituted and frozen. Do **not** create another audit family before resolving it.
+
+Entering and current authoritative state remains:
+
+```text
+R0 = Groundup-001 / #20 (frozen)
+K5 = current
+D2 = not identified
+Groundup-002 = not authorized
+```
+
+Frozen assay:
+
+```math
+\boxed{\texttt{HUMAN\_OBSERVER\_AUDIT\_001}}
+```
+
+Question:
+
+```math
+\boxed{\textbf{Can a competent human observer see objective-specific mastery evidence that }R_0\textbf{ cannot?}}
+```
+
+The blinded packet and sealed outcome key are frozen. Human judgments have not yet been collected. Therefore:
+
+```math
+\boxed{K_6\text{ does not exist yet}}
+```
+
+and:
+
+```math
+\boxed{D_2=\varnothing}
+```
+
+The immediate legal operation is to **execute the already-frozen human-observer assay without breaking blindness**, not to constitute another Trace representation or distinction family.
+
+Artifacts:
+
+```text
+artifacts/trace-human-observer-audit-001/
+  HUMAN_OBSERVER_AUDIT_PREREG.md
+  PACKET_HASHES.md
+  STATUS.md
+```
+
 ## Event-identity audit artifacts
 
 Preserve under:
@@ -290,7 +376,13 @@ Result JSON SHA-256:
 fd8b6c874d0094a35d89191888c4d70aa56a90275dca20feac101757c656a24a
 ```
 
-A deterministic rerun reproduced the exact result JSON hash.
+Recovered clean source SHA-256:
+
+```text
+f266f463c2b2f6e213c4b461be0ca4960a845bfdef341112eda8a54c9917cba4
+```
+
+The exact clean source artifact was recovered after the first public Git copy was found corrupted and non-executable, and has now been restored. It passes syntax compilation. The historical lineage records that a deterministic rerun reproduced the exact result JSON hash; a fresh post-repair rerun is not newly claimed here because the original Trace runtime inputs are not present in the current recovery environment.
 
 ## Frozen protocol state
 
@@ -336,26 +428,32 @@ Persist correction-relevant lineage, not scratch accumulation.
 Earned:
 
 - Groundup-001 remains frozen #20 incumbent;
-- Trace search state is now `K5`;
+- Trace search state is `K5`;
 - no `D2` is identified;
 - no Groundup-002 is authorized;
-- eight-family relational distinction audit and nine-family event-identity audit are negative results with preregistration, multiplicity control, and independent confirmation;
+- eight-family relational distinction audit and nine-family event-identity audit are negative results with preregistration, multiplicity control, and independent confirmation within their frozen splits;
+- `HUMAN_OBSERVER_AUDIT_001` is constituted and frozen but unevaluated;
+- the clean K4 relational-audit source has been restored; this provenance repair does not change K4;
 - PROTOCOL-001 remains frozen;
-- METHOD / PROTOCOL / RESEARCH STATE remain separate.
+- METHOD / PROTOCOL / RESEARCH STATE remain separate;
+- generic protocol transition viability is not automatically feedback-specific `C_improve`.
 
 Not earned:
 
 - that event interaction is absent;
 - that session-objective dependency is useless;
+- `K6`;
+- an identified `D2`;
 - a new Trace representation;
+- Groundup-002;
 - protocol-002;
 - full K ownership by the protocol;
 - general intelligence/corrigibility claims.
 
-Next legal Trace operation:
+Immediate legal Trace operation:
 
 ```math
-\boxed{\textbf{DISTINGUISH}}
+\boxed{\textbf{execute the already-frozen }\texttt{HUMAN\_OBSERVER\_AUDIT\_001}\textbf{ without breaking blindness}}
 ```
 
 The center remains:
