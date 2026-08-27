@@ -11,7 +11,7 @@ ZIP=Path('/mnt/data/train_transcripts(1).zip')
 OUT=Path('/mnt/data/trace_groundup/RELATIONAL_DISTINCTION_AUDIT.json')
 PREREG=Path('/mnt/data/trace_groundup/RELATIONAL_DISTINCTION_AUDIT_PREREG.md')
 EPS=1e-6
-RAW=['n_turns','stu_turns','stu_words','stu_chars','stu_questions','stu_num','stu_numonly','tut_turns','tut_words','tut_chars','tut_questions','tt_num','tut_numonly']
+RAW=['n_turns','stu_turns','stu_words','stu_chars','stu_questions','stu_num','stu_numonly','tut_turns','tut_words','tut_chars','tut_questions','tut_num','tut_numonly']
 STOP=set('''a an and are as at be been being but by can could did do does doing for from had has have having he her hers him his how i if in into is it its may me might my no not of on or our ours she should so some such than that the their theirs them then there these they this those to too under up us very was we what when where which who why will with would you your yours use using find finding give giving make making know knowing understand understanding identify identifying determine determining calculate calculating solve solving work working read reading write writing compare comparing order ordering represent representing see seeing'''.split())
 RX=re.compile(r'[a-z0-9]+')
 COLS=[
@@ -29,20 +29,19 @@ def terms(x):
     return set(t for t in RX.findall(str(x).lower()) if len(t)>=3 and t not in STOP)
 
 def sig(x):
-    x=np.asarray(x,float); return 1/(1+nl.exp(-np.clip(x,-40,40)))
+    x=np.asarray(x,float); return 1/(1+np.exp(-np.clip(x,-40,40)))
 
 def frozen_state_and_c2():
     F=pd.read_csv(ROOT/'train_features.csv').merge(pd.read_csv(ROOT/'train_labels.csv'),on='response_id',validate='one_to_one')
     y=F.is_correct.astype(int).to_numpy(); sess=F.session_id.astype(str).to_numpy(); oid=F.learning_objective_id.astype(str).to_numpy()
-    sy=pd.DataFrame({'s':sess,'y':y}).groupby('s').y.agg(X'min','max']); mixed=set(sy[(sy['min']==0)&(sy['max']==1)].index); idx=np.where(np.isin(sess,list(mixed)))[0]
+    sy=pd.DataFrame({'s':sess,'y':y}).groupby('s').y.agg(['min','max']); mixed=set(sy[(sy['min']==0)&(sy['max']==1)].index); idx=np.where(np.isin(sess,list(mixed)))[0]
     S=pd.read_csv(ROOT/'session_features.csv',usecols=['session_id']+RAW+['student_tail','tutor_tail']).drop_duplicates('session_id').reset_index(drop=True)
     S[['student_tail','tutor_tail']]=S[['student_tail','tutor_tail']].fillna('')
     sm={str(s):i for i,s in enumerate(S.session_id)}; rs=np.array([sm[str(s)] for s in sess],np.int32)
     O=pd.read_csv(CA/'objectives.csv'); om={str(o):i for i,o in enumerate(O.learning_objective_id)}; ro=np.array([om[str(o)] for o in oid],np.int32)
     Xs=sparse.load_npz(CA/'Xs.npz'); Xt=sparse.load_npz(CA/'Xt.npz'); Xo=sparse.load_npz(CA/'Xo.npz')
     CFG=json.loads((BUILD/'model.json').read_text()); M=np.load(BUILD/'model.npz'); c=M['coef']; k=0
-    R=np.log1p(np.maximum(S[RAW].fillna(0).to_numpy(float),0)); Rz
-=((R-M['scaler_mean'])/np.where(M['scaler_scale']==0,1,M['scaler_scale'])).astype(np.float32)
+    R=np.log1p(np.maximum(S[RAW].fillna(0).to_numpy(float),0)); Rz=((R-M['scaler_mean'])/np.where(M['scaler_scale']==0,1,M['scaler_scale'])).astype(np.float32)
     rates=CFG['objective_rates']; G=float(CFG['global_rate']); ps=np.array([float(rates.get(str(oid[i]),G)) for i in idx]); ps=np.clip(ps,EPS,1-EPS)
     score=np.log(ps/(1-ps))*c[k]; k+=1
     score+=Rz[rs[idx]]@c[k:k+len(RAW)]; k+=len(RAW)
