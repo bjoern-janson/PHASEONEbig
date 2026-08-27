@@ -1,16 +1,26 @@
 # Claim Ledger
 
-This file separates **demonstrated predecessor results**, **provisional empirical regularities**, **open questions**, and **claims that are explicitly not earned**.
+This ledger exists to stop **mechanism findings from inflating into definition claims**.
 
-The point is to prevent authority leakage from a successful local assay into a broader theory claim.
+The hierarchy is:
 
----
+```text
+PROPOSED MAIN OBJECT
+    ↓
+CAUSAL MEASUREMENT RESULTS
+    ↓
+MECHANISM / FAILURE RESULTS
+    ↓
+CURRENT OPEN DIAGNOSTICS
+```
 
-# A. Demonstrated within the predecessor assay
+The center of the program is:
 
-## A1. Adaptive contribution is counterfactual, not trajectory slope
+```math
+\boxed{I_{\rm adaptive}\propto C_{\rm improve}}
+```
 
-The governing quantity is:
+with:
 
 ```math
 \boxed{
@@ -18,146 +28,204 @@ C_{\rm improve}(t,H,e)
 =
 V_H(S_t^{+\mathrm{AF}};e)
 -
-V_H(S_t^{-\mathrm{AF}};e)
+V_H(S_t^{\mathrm{ctrl}(AF)};e)
 }
 ```
 
-and not `dV/dt`.
-
-Observed growth, stability, or decline does not by itself determine adaptive contribution.
+The empirical lineage does not prove this as a universal law. It tests how to measure and understand the quantity without being fooled.
 
 ---
 
-## A2. Competence and current adaptive contribution are distinct
+# A. Program-level proposal
+
+## A1. Adaptive intelligence is proposed to track capacity for feedback-caused future improvement
+
+```math
+\boxed{I_{\rm adaptive}\propto C_{\rm improve}}
+```
+
+Status: **governing proposal / not a universal established law**.
+
+Plain language:
+
+> Adaptive intelligence is the capacity to convert feedback into greater future viability than would otherwise be achieved.
+
+## A2. Developmental loop
+
+```math
+\boxed{
+\text{distinguish}
+\rightarrow
+\text{transform}
+\rightarrow
+\text{reconstitute}
+\rightarrow
+\text{continue}
+\rightarrow
+\text{distinguish better}
+}
+```
+
+Status: **program-level organizing loop**, not an empirically unique mechanism.
+
+## A3. Counterfactual contribution is not observed slope
+
+```math
+\boxed{\frac{dV}{dt}\neq C_{\rm improve}}
+```
+
+Status: **methodological requirement**.
+
+Observed growth, stability, or decline does not by itself identify the causal contribution of adaptive feedback.
+
+---
+
+# B. Demonstrated causal-measurement results
+
+These results protect the interpretation of `C_improve`.
+
+## B1. Competence and current adaptive contribution are distinct
 
 A frozen system can retain high competence while having little or no current consequence-sensitive adaptive contribution.
 
 ```math
+\boxed{\text{competence}\neq\text{adaptive intelligence}}
+```
+
+Scope: the adaptive-intelligence proposal, not every ordinary use of the word intelligence.
+
+## B2. Feedback requires a causal return path
+
+The predecessor assays used:
+
+```math
 \boxed{
-\text{competence}\neq\text{adaptive intelligence}
+A_{\le t}^{(\mathrm{actual/candidate})}
+\rightsquigarrow C_t
+\rightsquigarrow E_t
+\rightsquigarrow A_{>t}
 }
 ```
 
----
+A purported consequence must be downstream of relevant behavior and able to alter later behavior.
 
-## A3. Frozen-vs-adaptive is not a clean feedback-specific comparison
+## B3. Observational equivalence is not causal equivalence
 
-A frozen control removes both consequence sensitivity and generic plasticity.
+Yoked/replay controls showed that systems can match on a reference trajectory while differing under intervention on consequence.
 
-The matched decomposition is:
+```math
+\boxed{
+\text{observational equivalence}
+\not\Rightarrow
+\text{causal equivalence}
+}
+```
+
+## B4. Frozen-vs-adaptive is not a clean feedback-specific assay
+
+The surgical decomposition is:
 
 ```math
 \boxed{
 \begin{aligned}
-C_{\rm plasticity}
-&=V_{\rm sham}-V_{\rm frozen}\\
-C_{\rm feedback}
-&=V_{\rm true}-V_{\rm sham}
-\end{aligned}
-}
+C_{\rm plasticity}&=V_{\rm sham}-V_{\rm frozen}\\
+C_{\rm feedback}&=V_{\rm true}-V_{\rm sham}
+\end{aligned}}
 ```
 
 A positive true-vs-frozen result can coexist with negative true-vs-sham feedback-specific value.
 
----
+## B5. Feedback quality can reverse the sign of feedback-specific contribution
 
-## A4. Feedback quality can reverse the sign of feedback-specific contribution
+Controlled corruption produced positive, neutral, and negative `C_feedback` depending on consequence quality.
 
-Controlled corruption experiments showed that informative consequence coupling can be positive, informationally neutral coupling near zero, and sufficiently misleading coupling negative.
+The exact neutral point in the symmetric binary assay is not universal.
 
-The numerical crossover in the symmetric binary construction is assay-specific.
+## B6. Source reliability is not equivalent to adaptive contribution
 
----
-
-## A5. Source reliability is not equivalent to adaptive contribution
-
-Natural weak-teacher experiments showed that a source can be substantially above chance and still produce:
+A source can be substantially above chance while its consequence coupling produces:
 
 ```math
 C_{\rm feedback}<0.
 ```
 
-Global source accuracy does not determine whether coupling that source into the current adaptive mechanism improves causal viability relative to sham.
-
----
-
-## A6. Independent source agreement is not sufficient authority evidence
-
-Independently trained teachers can share the same shifted error and agree strongly while both are wrong.
+Therefore:
 
 ```math
 \boxed{
-\text{agreement}\neq\text{independent corrective evidence}
+\text{source reliability}
+\neq
+\text{actionable adaptive authority}
 }
 ```
 
 ---
 
-## A7. Update authority and feedback-specific authority are distinct
+# C. Demonstrated mechanism and failure results
 
-A gate can successfully learn when a candidate update appears useful while failing to establish that the consequence-linked component is better than a matched sham component.
+These explain variation in `C_improve`. They do not redefine it.
+
+## C1. Agreement is not sufficient authority evidence
+
+Independently trained sources can share the same shifted error.
 
 ```math
 \boxed{
-A_{\rm update}\neq A_{\rm feedback}
+\text{agreement}
+\neq
+\text{independent corrective evidence}
 }
 ```
 
----
+## C2. Update authority and feedback-specific authority are distinct
 
-## A8. Feedback-specific authority can be partially estimated online
+A gate can identify a useful change without proving that the consequence-linked component is what deserves causal credit.
 
-A pre-decision true-vs-sham differential gate achieved strictly positive feedback-specific value in some regimes and strongly suppressed harm in others without using the current oracle outcome.
+```math
+\boxed{A_{\rm update}\neq A_{\rm feedback}}
+```
 
-This is partial authority acquisition, not a solved general estimator.
+## C3. Feedback-specific authority can be partially estimated online
 
----
+A true-vs-sham differential gate produced positive strict feedback-specific value in some regimes and strong harm suppression in others without current oracle access.
 
-## A9. Ranking signal and causal-zero calibration are distinct
+Status: **partial success**, not solved general authority.
 
-The authority estimator could rank better/worse candidate pairs while still granting authority at the wrong zero-point.
+## C4. Discrimination and causal-zero calibration are distinct
 
 ```math
 \boxed{
-\text{discrimination}\neq\text{calibration}
+\text{ranking quality}
+\neq
+\text{correct authority threshold}
 }
 ```
 
-Calibrated abstention improved strict feedback-positive performance in the predecessor assay.
+Calibrated abstention improved the authority gate in the predecessor assay.
 
----
+## C5. One-step authority does not automatically compose
 
-## A10. One-step authority does not automatically compose
-
-At the `90°` stress regime, many accepted updates were immediately true-better-than-sham while the continued feedback-specific trajectory became negative.
+Locally true-better-than-sham corrections can participate in a harmful continued trajectory.
 
 ```math
 \boxed{
-\text{local feedback authority}
+\text{good local decision}
 \not\Rightarrow
-\text{trajectory-level authority}
+\text{good adaptive trajectory}
 }
 ```
 
----
+## C6. Naive replay is not a sufficient horizon model
 
-## A11. Naive trajectory replay is not a sufficient horizon model
+Replaying a few recent contexts after a candidate update predicted actual continued-dynamics horizon value worse than the simpler pointwise signal in the stress assay.
 
-Replaying recent past feedback contexts to estimate short-horizon authority produced worse selection than the one-step score and predicted actual continued-dynamics horizon value less well.
+This rejects one horizon estimator, not the relevance of horizon.
 
-The failure was representational, not evidence that horizon is irrelevant.
+## C7. One accepted correction does not immediately poison the next opportunity
 
----
+A one-transition diagnostic did not support a simple immediate-poisoning explanation for the later collapse.
 
-## A12. One accepted correction does not immediately poison the next authority opportunity
-
-A one-transition diagnostic showed that an accepted true-feedback correction did not make the immediate next true-vs-sham opportunity worse relative to withholding.
-
-Therefore the longer-horizon collapse is not explained by a simple one-step poisoning mechanism.
-
----
-
-## A13. Individually beneficial corrections are non-additive
+## C8. Individually beneficial corrections are non-additive
 
 For correction blocks:
 
@@ -171,13 +239,11 @@ C_{\rm joint}^{(m)}
 }
 ```
 
-became negative even when every constituent correction was individually true-better-than-sham from a common anchor.
+became negative even when every constituent correction was individually beneficial from a common anchor.
 
----
+## C9. Negative composition was localized to state-dependent correction recomputation
 
-## A14. The negative composition term is generated by state-dependent correction recomputation
-
-Decomposition showed:
+The decomposition found:
 
 ```math
 \Gamma_{\rm metric}>0,
@@ -185,47 +251,31 @@ Decomposition showed:
 \Gamma_{\rm update}<0.
 ```
 
-The harmful subadditivity came from later updates being recomputed from states changed by earlier updates, not merely from objective-function curvature.
+Thus the negative interaction came from later corrections being regenerated from states changed by earlier corrections, not merely objective curvature.
 
----
+## C10. Correction value is path-dependent
 
-## A15. Correction value is path-dependent
-
-The same correction-event set produced materially different feedback-specific value under different event orders:
+The same correction-event set produced different aggregate values under different orders:
 
 ```math
-\boxed{
-C^{(m,\pi_1)}\neq C^{(m,\pi_2)}
-}
+\boxed{C^{(m,\pi_1)}\neq C^{(m,\pi_2)}}
 ```
 
-A fixed-vector control was order-invariant to numerical precision.
+while fixed update vectors were order-invariant to numerical precision.
 
-Therefore the path dependence arises from state-dependent generation of later updates.
+## C11. Pairwise order preference is substantially predictable before acting
 
----
+Out-of-seed pair-known prediction achieved roughly `0.90` AUC in the predecessor geometry.
 
-## A16. Pairwise order preference is substantially predictable before acting
+Status: **demonstrated in that assay**, not a universal sequencing law.
 
-Out-of-seed models predicted which of two correction-event orders would be better using only pre-decision information.
+## C12. Pre-decision ordering information is causally actionable
 
-The pair-known interface achieved approximately `0.90` AUC in the predecessor assay.
-
-This establishes pre-decision identifiability within that geometry, not a universal sequencing law.
-
----
-
-## A17. Pre-decision ordering information is causally actionable
-
-Using the held-out predictor to choose order causally improved feedback-specific value relative to predicted-worse and fixed-order policies.
-
-This establishes a small path-control mechanism:
+A held-out order predictor improved the resulting pairwise feedback-specific trajectory relative to fixed and deliberately predicted-worse orderings.
 
 ```math
 \boxed{
 \text{pre-decision information}
-\rightarrow
-\text{order prediction}
 \rightarrow
 \text{order intervention}
 \rightarrow
@@ -233,37 +283,25 @@ This establishes a small path-control mechanism:
 }
 ```
 
----
+## C13. Pairwise sequencing preferences are not perfectly transitive
 
-## A18. Pairwise preferences are not perfectly transitive, but strong-margin cycles were rare
+Common-anchor triples contained genuine cycles, concentrated near weak margins.
 
-Common-anchor triples exhibited genuine preference cycles, concentrated near weak-margin decisions.
+Strong-margin preferences were mostly coherent in the sampled assay.
 
-The assay did not establish that global sequencing is necessarily a hard non-transitive problem.
+## C14. Sequencing remains useful with imperfect online selection
 
----
+After removing the oracle-positive pair filter, sequencing still improved the actual selected population and reduced harm even when upstream selection was wrong.
 
-## A19. Sequencing remains useful with imperfect online selection
+## C15. Sequencing survives continuous execution
 
-After removing the oracle-positive pair filter, the online selector admitted good, mixed, and bad pairs.
+Continuous deployment preserved a positive sequencing increment relative to fixed chronological order.
 
-The pairwise sequencer still improved causal value across the actual selected population and reduced harm even when upstream selection was wrong.
+Therefore pairwise path control was not only a common-anchor artifact.
 
----
+## C16. Sequencing did not materially rewrite future admission decisions in the predecessor stream
 
-## A20. Sequencing survives continuous execution
-
-When the selector + sequencer ran continuously, predicted sequencing remained beneficial relative to chronological ordering.
-
-Thus the pairwise path-control result was not merely a static common-anchor artifact.
-
----
-
-## A21. Sequencing does not materially rewrite future admission decisions in the predecessor stream
-
-Despite altering parameter trajectories, sequencing produced almost identical later acceptance sets in the tested 50-step and 200-step streams.
-
-Therefore:
+Despite changing parameter trajectories, sequencing produced nearly identical later acceptance paths.
 
 ```math
 \boxed{
@@ -274,33 +312,23 @@ but:
 
 ```math
 \boxed{
-\text{sequencing-induced recursive selection control not demonstrated}
+\text{strong sequencing-induced recursive selection control not demonstrated}
 }
 ```
 
----
+## C17. Calibrated selection extended the positive adaptive horizon without stabilizing it indefinitely
 
-## A22. Calibrated selection extends the positive adaptive horizon but does not stabilize it indefinitely
+Replacing pointwise selection with calibrated abstention while freezing the sequencer made the process net-positive over shorter measured horizons and much less harmful at long horizon.
 
-Replacing the pointwise selector with calibrated abstention while freezing the sequencer made the process feedback-positive over shorter horizons and substantially reduced long-horizon harm.
+The specific 100–125 step crossover is assay-specific.
 
-In the predecessor assay it remained positive through the 100-step measurement and negative by the 125-step measurement.
+## C18. Long-horizon failure was not stale local calibration
 
-Those values are assay-specific.
+Admission-time instrumentation showed later accepted corrections became more often locally true-better-than-sham and the local score became better ranked and more conservative against its one-step target.
 
----
+Yet realized sequential contribution became increasingly negative.
 
-## A23. The long-horizon failure is not stale local calibration
-
-Admission-time instrumentation showed that later accepted corrections became **more** often locally true-better-than-sham and the local authority score became better ranked and more conservative against its one-step target.
-
-Yet their realized sequential contribution became increasingly negative.
-
-Therefore the failure was not simply that the selector forgot how to identify locally good corrections.
-
----
-
-## A24. Local authority and policy authority are empirically distinct
+## C19. Local authority and policy authority are empirically distinct
 
 The final predecessor decomposition showed:
 
@@ -308,115 +336,127 @@ The final predecessor decomposition showed:
 \boxed{
 \sum_i C_i^{(1)}>0,
 \qquad
-C_{\rm realized}^{(H)}<0,
+\Gamma_H\ll0,
 \qquad
-\Gamma_H\ll0.
+C_{\rm realized}^{(H)}<0
 }
 ```
 
-Thus:
+Therefore:
 
 ```math
-\boxed{
-A_{\rm local}\neq A_{\rm policy}
-}
+\boxed{A_{\rm local}\neq A_{\rm policy}}
 ```
 
-The local authority criterion remained valid against its local target while the policy formed by repeatedly applying it lost compositional validity.
+This is currently the strongest failure localization in the lineage.
+
+It reinforces the need to return to the top-level counterfactual rather than trusting local machinery as a proxy for adaptive success.
 
 ---
 
-# B. Provisional empirical regularities
+# D. Provisional empirical regularities
 
-These survived multiple predecessor assays but should not be treated as universal laws.
+These are useful patterns, not universal laws.
 
-## B1. Environmental departure can amplify exposure to feedback quality
+## D1. Environmental departure can amplify exposure to feedback quality
 
-In several toy, control, and rotated-digit assays, reliable feedback became more valuable and misleading feedback more harmful as inherited competence deteriorated.
+Across several predecessor geometries, reliable feedback became more useful and misleading feedback more harmful as inherited competence deteriorated.
 
-This is a cross-assay pattern, not a universal monotonic theorem.
+## D2. Exposure duration can accumulate both benefit and harm
 
-## B2. Exposure duration can accumulate both benefit and harm
+Longer exposure often increased the magnitude of feedback-specific benefit or damage.
 
-Longer exposure often increased the magnitude of the sign already induced by the feedback relationship.
+## D3. Simple pairwise geometry can contain useful sequencing information
 
-Mechanism dependence remains possible.
-
-## B3. Simple pairwise geometry can contain useful sequencing information
-
-Feedback-specific update magnitude differences were strongly predictive of order preference in the predecessor geometry.
+Feedback-specific update magnitude differences predicted order preference strongly in the predecessor geometry.
 
 Do not universalize the particular feature or direction.
 
-## B4. Strong-margin sequencing preferences appear more coherent than weak-margin preferences
+## D4. Strong-margin sequencing preferences appear more coherent than weak-margin preferences
 
-Observed cycles concentrated near small pairwise order effects.
-
-This supports abstention/indifference as a future sequencing option but does not establish a universal threshold.
+Observed cycles concentrated near small order effects.
 
 ---
 
-# C. Open questions
+# E. Open questions
 
-## C1. Self-monitoring of compositional validity
+Open does not mean failed.
+
+## E1. Generality of the main proposal
+
+How far does:
+
+```math
+I_{\rm adaptive}\propto C_{\rm improve}
+```
+
+capture ordinary notions of intelligence beyond adaptive intelligence?
+
+## E2. Cross-domain generalization
+
+Which causal measurement and mechanism results survive in other learning, control, agentic, evolutionary, social, and representational systems?
+
+## E3. Better mechanisms for positive long-horizon `C_improve`
+
+Which mechanisms reliably preserve positive adaptive contribution as horizon, novelty, and interaction complexity increase?
+
+## E4. Self-monitoring of compositional validity
 
 ```math
 \boxed{
-\textbf{Can operational evidence reveal that the authority rule itself is losing compositional validity?}
+\textbf{Can operational evidence predict that a local authority rule is losing trajectory-level validity?}
 }
 ```
 
-This is the live question of `PHASEONEbig`.
+This is one current diagnostic branch.
 
-## C2. Online prediction of policy-level authority failure
+## E5. Rule-level correction
 
-Can an online monitor predict future deterioration of policy-level feedback-specific value beyond simple elapsed-time, update-count, or local-score baselines?
+If deterioration can be detected, can that evidence causally alter the authority rule and improve long-horizon `C_improve`?
 
-## C3. Evidence sufficiency of the current interface
+Untested.
 
-If prediction fails, is the failure due to an inadequate estimator or because the necessary information is not available through the current observation interface?
+## E6. Interface sufficiency
 
-## C4. Rule-level correction
-
-If deterioration can be detected, can that evidence acquire authority over the rule itself—e.g. increase abstention, suspend the rule, or revise it—and extend viable adaptation?
-
-This has **not** been tested.
-
-## C5. Generalization beyond the predecessor geometry
-
-Which of the demonstrated structural results survive in other learning, control, multi-agent, and agentic environments?
+If deterioration is not predictable, is the limitation estimator capacity or missing information at the current interface?
 
 ---
 
-# D. Explicitly unearned claims
+# F. Explicitly unearned claims
 
-Do **not** claim any of the following from the current evidence:
+Do **not** claim from the current evidence:
 
 - that all intelligence is adaptive intelligence;
-- that `I_adaptive ∝ C_improve` has been established as a universal scientific law;
-- that a thermostat, evolution, human intelligence, and AI learning are mechanistically identical;
-- that `q=0.5` is a universal feedback threshold;
-- that source accuracy is sufficient to determine authority;
-- that feedback-specific authority has been solved generally;
-- that longer lookahead automatically solves policy authority;
-- that the apparent predecessor horizon crossing is universal;
-- that pairwise sequencing scales to globally optimal sequence planning;
-- that smaller updates should universally come first;
-- that sequencing creates strong recursive selection control;
-- that the current system is recursively self-improving;
-- that the authority rule has already learned to monitor or revise itself;
-- that `PHASEONEbig` already demonstrates self-monitoring of rule adequacy.
+- that `I_adaptive ∝ C_improve` is already an established universal scientific law;
+- that thermostats, evolution, humans, and AI learning are mechanistically identical;
+- that growth is required for positive adaptive contribution;
+- that a frozen baseline is always a sufficient counterfactual;
+- that source accuracy determines authority;
+- that agreement determines corrective authority;
+- that feedback-specific authority is solved generally;
+- that one-step authority implies long-horizon viability;
+- that longer replay/lookahead automatically solves policy authority;
+- that the predecessor horizon crossover is universal;
+- that smaller corrections should universally come first;
+- that pairwise sequencing yields a globally optimal scheduler;
+- that sequencing materially rewrites future selection in the demonstrated stream;
+- that self-monitoring of policy adequacy has been demonstrated;
+- that the authority rule has learned to revise itself;
+- that recursive self-improvement has been demonstrated;
+- that any mechanism discovered in the lineage replaces `C_improve` as the program's main object.
 
 ---
 
-# E. Current claim ceiling
+# G. Current claim ceiling
 
-The strongest inherited statement is:
+The strongest program-level proposal remains:
 
-> **A locally well-calibrated correction policy can become globally maladaptive because repeated locally beneficial corrections interact negatively; the policy can remain accurate about its local target while losing compositional validity over the trajectory.**
+> **Adaptive intelligence tracks the causal future viability gained because a system can use feedback, relative to what would otherwise have happened.**
 
-The strongest current repository question is:
+The strongest late empirical result is:
 
-> **Can that loss of compositional validity itself become an operationally detectable error signal?**
+> **A locally well-calibrated correction policy can remain correct about individual corrections while repeated application becomes globally maladaptive because state-dependent interactions overwhelm accumulated local benefit.**
 
-Everything beyond that remains open until tested.
+The first statement is the center.
+
+The second is one important diagnostic about how the center can fail.
