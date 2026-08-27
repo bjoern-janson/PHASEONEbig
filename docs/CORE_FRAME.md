@@ -34,6 +34,34 @@ The top-level question is therefore:
 
 Everything else in this repository serves that question.
 
+### Causal type boundary
+
+A generic survival comparison may legitimately compute:
+
+```math
+\boxed{
+\Delta V_{\rm transition}
+=
+V_{\rm candidate}-V_{\rm incumbent}
+}
+```
+
+but:
+
+```math
+\boxed{
+\Delta V_{\rm transition}
+\neq
+C_{\rm improve}
+}
+```
+
+unless the domain's intervention/control design identifies the matched adaptive-feedback causal contrast.
+
+This distinction is especially important for `adaptive-loop-protocol-001`. The frozen protocol uses the historical field name `c_improve` for a domain-declared candidate/incumbent viability difference. That field name does not by itself establish feedback-specific causal attribution. The protocol is a generic survival/provenance kernel; the domain remains responsible for constituting the causal experiment that would justify interpreting a transition delta as `C_improve`.
+
+This is a semantic/type clarification, not a new protocol primitive.
+
 ---
 
 ## Developmental loop
@@ -62,7 +90,7 @@ A useful reading is:
 - **continue** — remain viable long enough for the change to matter;
 - **distinguish better** — acquire greater future capacity to detect, represent, or act on consequential differences.
 
-The loop is the **process description**. `C_improve` is the **causal score of what that process accomplished**.
+The loop is the **process description**. `C_improve` is the **causal score of what that process accomplished** when the relevant matched causal contrast has actually been identified.
 
 The loop is deliberately mechanism-agnostic. Memory, learning, planning, compression, representation change, selection, authority gating, sequencing, repair, inheritance, self-monitoring, and rule revision may implement parts of it. None of them is the definition.
 
