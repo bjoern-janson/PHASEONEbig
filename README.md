@@ -1,26 +1,14 @@
 # PHASEONEbig
 
-> **Experimental assay for detecting deterioration in the compositional validity of an authority rule during continued adaptive operation.**
+> **Does adaptive feedback make the future better than it otherwise would have been?**
 
-## Purpose
-
-This repository begins **after** a substantial predecessor experimental lineage.
-
-The live question is deliberately narrow:
-
-> **Can a system detect, using information available during operation, that its own authority rule is losing compositional validity?**
-
-Everything before this boundary is prior evidence and provenance. This repository should not silently re-open or re-label those predecessor results as if they were newly established here.
-
-## Governing definition
-
-The upstream adaptive-intelligence proposal is frozen as:
+This repository studies a deliberately simple proposal:
 
 ```math
 \boxed{I_{\rm adaptive}\propto C_{\rm improve}}
 ```
 
-with realized counterfactual contribution:
+with realized causal contribution:
 
 ```math
 \boxed{
@@ -28,11 +16,72 @@ C_{\rm improve}(t,H,e)
 =
 V_H(S_t^{+\mathrm{AF}};e)
 -
-V_H(S_t^{-\mathrm{AF}};e)
+V_H(S_t^{\mathrm{ctrl}(AF)};e)
 }
 ```
 
-The important correction is:
+In plain language:
+
+> **Adaptive intelligence is the capacity to convert feedback into greater future viability than would otherwise be achieved.**
+
+Everything else in this repository is subordinate to that quantity.
+
+---
+
+## Developmental loop
+
+The guiding loop is:
+
+```math
+\boxed{
+\text{distinguish}
+\rightarrow
+\text{transform}
+\rightarrow
+\text{reconstitute}
+\rightarrow
+\text{continue}
+\rightarrow
+\text{distinguish better}
+}
+```
+
+The loop is mechanism-agnostic. Memory, learning, representation change, authority, sequencing, planning, compression, inheritance, self-monitoring, and rule revision are possible mechanisms inside the loop. They are not the definition.
+
+---
+
+# Research hierarchy
+
+```text
+MAIN OBJECT
+C_improve
+    │
+    ├── Does feedback actually cause the difference?
+    ├── Does plasticity masquerade as feedback benefit?
+    ├── Does feedback have useful authority?
+    ├── Do corrections compose?
+    ├── Does order matter?
+    ├── Can order be controlled?
+    └── Does the adaptive policy remain viable over time?
+```
+
+The repository should preserve this hierarchy:
+
+1. **Definition** — `I_adaptive ∝ C_improve`.
+2. **Developmental loop** — distinguish → transform → reconstitute → continue → distinguish better.
+3. **Mechanisms** — candidate ways the loop may work.
+4. **Assays and controls** — tools for trustworthy causal attribution.
+5. **Failure modes** — reasons the loop may fail or produce negative `C_improve`.
+
+The controls are important because they protect the main quantity from false attribution. They are not the theory.
+
+See [`docs/CORE_FRAME.md`](docs/CORE_FRAME.md).
+
+---
+
+## Why the counterfactual matters
+
+Observed trajectory is not adaptive contribution:
 
 ```math
 \boxed{
@@ -44,64 +93,139 @@ The important correction is:
 }
 ```
 
-Adaptive intelligence therefore does **not** require observed growth. It can manifest as maintained viability, reduced decline, damage avoidance, or recovery relative to the matched counterfactual.
+and:
 
-## Feedback constitution
+```math
+\boxed{\frac{dV}{dt}\neq C_{\rm improve}}
+```
 
-The predecessor work operationalized feedback through the causal return path:
+A system may decline while adaptive feedback still helps if the matched control declines more. A system may grow while adaptive feedback contributes nothing if the same growth would have happened anyway.
+
+The relevant control must remove the adaptive-feedback contribution being credited while preserving as much else as possible.
+
+In many predecessor assays the clean comparison was not `adaptive vs frozen`, but:
 
 ```math
 \boxed{
-A_{\le t}^{(\mathrm{actual/candidate})}
-\rightsquigarrow
-C_t
-\rightsquigarrow
-E_t
-\rightsquigarrow
-A_{>t}
+C_{\rm feedback}=V_{\rm true}-V_{\rm sham}
 }
 ```
 
-where the purported consequence must be causally downstream of relevant actual or candidate behavior.
+where the sham/yoked arm preserves plasticity while severing the consequence relationship.
 
-This distinguishes consequence-sensitive feedback from useful but feed-forward input, replayed updates, and generic plasticity.
+---
 
-## Core control decomposition
+# What the predecessor experiments established
 
-The central three-arm assay became:
+The experimental lineage repeatedly attacked ways of being fooled about `C_improve`.
+
+### 1. Competence is not current adaptive contribution
+
+A frozen system can be highly capable while having little or no current consequence-sensitive adaptive contribution.
+
+```math
+\boxed{\text{competence}\neq\text{adaptive intelligence}}
+```
+
+### 2. Plasticity can masquerade as feedback benefit
+
+A system can outperform a frozen baseline while genuine consequence coupling is harmful.
+
+This motivated the decomposition:
 
 ```math
 \boxed{
 \begin{aligned}
-V_{\rm frozen}
-&:\text{ inherited competence}\\
-V_{\rm sham}-V_{\rm frozen}
-&:\text{ generic plasticity contribution}\\
-V_{\rm true}-V_{\rm sham}
-&:\text{ consequence-sensitive feedback contribution}
-\end{aligned}
+C_{\rm plasticity}&=V_{\rm sham}-V_{\rm frozen}\\
+C_{\rm feedback}&=V_{\rm true}-V_{\rm sham}
+\end{aligned}}
+```
+
+### 3. Source reliability is not actionable authority
+
+Reliable-looking sources can still induce harmful adaptive changes.
+
+```math
+\boxed{
+\text{source reliability}
+\neq
+\text{adaptive contribution}
 }
 ```
 
-A matched sham/yoked control is essential. A frozen-vs-adaptive comparison alone can falsely credit generic plasticity to feedback.
+### 4. Update authority is not feedback-specific authority
 
-## Current empirical boundary
-
-The predecessor experiments established an observable gap between **local correction quality** and **trajectory validity**.
-
-For accepted corrections with positive isolated local value:
+A gate can identify useful changes without establishing that the consequence-linked component deserves causal credit.
 
 ```math
-\boxed{\sum_i C_i^{(1)} > 0}
+\boxed{A_{\rm update}\neq A_{\rm feedback}}
 ```
 
-while the realized long-horizon feedback-specific contribution can become negative:
+### 5. Individually beneficial corrections do not automatically compose
+
+For correction blocks:
 
 ```math
-\boxed{C_{\rm realized}^{(H)} < 0}
+\boxed{
+\Gamma_m
+=
+C_{\rm joint}^{(m)}
+-
+\sum_i C_i^{(1)}
+}
 ```
 
-because the composition term becomes strongly negative:
+can be negative even when every constituent correction is individually beneficial.
+
+The negative term was localized to state-dependent recomputation of later corrections, not merely objective curvature.
+
+### 6. Correction value is path-dependent
+
+The same correction opportunities can produce different aggregate causal value under different orders:
+
+```math
+\boxed{C^{(m,\pi_1)}\neq C^{(m,\pi_2)}}
+```
+
+because:
+
+```math
+\boxed{\Delta\theta_i=\Delta\theta_i(\theta_{i-1})}
+```
+
+### 7. Sequencing can be predicted and controlled
+
+Pre-decision information predicted which pair ordering would be better, and using that prediction causally improved the resulting trajectory.
+
+```math
+\boxed{
+\text{pre-decision information}
+\rightarrow
+\text{order intervention}
+\rightarrow
+\text{higher adaptive value}
+}
+```
+
+### 8. Better local selection can extend the viable horizon without stabilizing it indefinitely
+
+Calibrated abstention improved the adaptive-feedback trajectory for finite horizons, but the process eventually crossed negative in the long-horizon stress test.
+
+### 9. Local correctness can coexist with trajectory failure
+
+The strongest late result was:
+
+```math
+\boxed{
+\sum_i C_i^{(1)}>0,
+\qquad
+\Gamma_H\ll0,
+\qquad
+C_{\rm realized}^{(H)}<0
+}
+```
+
+where:
 
 ```math
 \boxed{
@@ -110,78 +234,58 @@ because the composition term becomes strongly negative:
 C_{\rm realized}^{(H)}
 -
 \sum_i C_i^{(1)}
-\ll 0
 }
 ```
 
-This yields the operational distinction:
+The selector became better at identifying individually useful corrections while the repeated policy became globally maladaptive because interaction burden accumulated faster than local benefit.
+
+Thus:
 
 ```math
 \boxed{A_{\rm local}\neq A_{\rm policy}}
 ```
 
-- `A_local`: does this correction deserve authority here?
-- `A_policy`: does repeatedly granting authority according to this rule remain viable over the trajectory?
+This is a diagnostic result about the causal anatomy of `C_improve`. It is not a new definition of intelligence.
 
-The key inherited result is that the local authority criterion can remain well calibrated to its **local target** while repeated locally beneficial corrections become globally maladaptive because their interactions accumulate.
+---
 
-## Research status
+# Current empirical boundary
 
-```text
-LOCAL AUTHORITY          → demonstrated within predecessor assay
-SEQUENCING               → demonstrated within predecessor assay
-SELECTION + SEQUENCING   → demonstrated within predecessor assay
-LONG-HORIZON COMPOSITION → failure localized
-SELF-MONITORING OF RULE  → OPEN / untested here
-```
-
-`OPEN` means **not yet tested**. It does not mean failed.
-
-## Live question
+The current observed gap is:
 
 ```math
 \boxed{
-\textbf{Can operational evidence reveal that the authority rule itself is losing compositional validity?}
+\text{local correctness}
+\not\Rightarrow
+\text{trajectory-level validity}
 }
 ```
 
-The immediate target is **detection**, not automatic rule revision.
+One live diagnostic branch asks:
 
-A future intervention may test whether evidence of deteriorating compositional validity should cause the system to increase abstention, suspend the current authority rule, or otherwise revise policy. That intervention should only be introduced after the detection problem is independently established.
-
-## Predecessor lineage
-
-```text
-definition
-  ↓
-feedback constitution
-  ↓
-sham/yoked decomposition
-  ↓
-authority
-  ↓
-composition failure
-  ↓
-path dependence
-  ↓
-sequencing control
-  ↓
-continuous endogenous control
-  ↓
-calibrated selection
-  ↓
-long-horizon composition failure
-  ↓
-CURRENT OPEN QUESTION: self-monitoring of rule adequacy
+```math
+\boxed{
+\textbf{Can operational evidence reveal that the authority rule is losing compositional validity?}
+}
 ```
 
-See:
+That question is **open / untested**.
 
-- [`docs/2026-08-27_EMPIRICAL_LINEAGE.md`](docs/2026-08-27_EMPIRICAL_LINEAGE.md) — full predecessor provenance chain.
-- [`docs/CURRENT_BOUNDARY.md`](docs/CURRENT_BOUNDARY.md) — the one live research question and first assay constraints.
-- [`docs/CLAIM_LEDGER.md`](docs/CLAIM_LEDGER.md) — demonstrated, provisional, open, and explicitly unearned claims.
+Self-monitoring has not been demonstrated. Rule self-revision has not been demonstrated. Recursive self-improvement has not been demonstrated.
 
-## Methodological discipline
+See [`docs/CURRENT_BOUNDARY.md`](docs/CURRENT_BOUNDARY.md).
+
+---
+
+# The anti-scope-creep rule
+
+Whenever a new mechanism appears, ask:
+
+> **Does this change our estimate or causal interpretation of `C_improve`, or does it merely help us understand it?**
+
+If it only explains the quantity, keep it subordinate.
+
+The research cycle is:
 
 ```math
 \boxed{
@@ -191,30 +295,35 @@ See:
 \rightarrow
 \text{failure localization}
 \rightarrow
-\text{minimal sufficient repair}
+\text{minimal repair}
 \rightarrow
 \text{retest}
+\rightarrow
+\textbf{return to }C_{\rm improve}
 }
 ```
 
-Controls should preserve everything possible while severing only the causal edge under test.
+---
 
-In particular:
+# Repository map
 
-- do not substitute frozen baselines for matched sham/yoked controls when measuring feedback-specific value;
-- do not use post-hoc oracle outcomes in online authority decisions;
-- distinguish local update utility from feedback-specific utility;
-- distinguish pointwise authority from policy-level authority;
-- distinguish non-additivity from path dependence;
-- distinguish demonstrated mechanism from speculative generalization;
-- keep the current self-monitoring question live without importing unearned claims from the predecessor lineage.
+- [`docs/CORE_FRAME.md`](docs/CORE_FRAME.md) — definition, developmental loop, hierarchy, and anti-scope-creep guardrail.
+- [`docs/2026-08-27_EMPIRICAL_LINEAGE.md`](docs/2026-08-27_EMPIRICAL_LINEAGE.md) — detailed experimental provenance: successive attempts to make `C_improve` causally trustworthy.
+- [`docs/CLAIM_LEDGER.md`](docs/CLAIM_LEDGER.md) — demonstrated results, provisional regularities, open questions, and explicitly unearned claims.
+- [`docs/CURRENT_BOUNDARY.md`](docs/CURRENT_BOUNDARY.md) — current diagnostic boundary around local correctness versus trajectory validity.
 
-## Claim ceiling
+---
 
-This repository does **not** begin from the claim that recursive self-correction has been demonstrated.
+# Claim ceiling
 
-The strongest inherited result is narrower:
+This repository does **not** claim that all intelligence is adaptive intelligence, that the proportionality is already a universal scientific law, or that any single mechanism is the essence of intelligence.
 
-> **A locally well-calibrated correction policy can become globally maladaptive because repeated locally beneficial corrections interact negatively; the policy can remain accurate about its local target while losing compositional validity over the trajectory.**
+The center remains small:
 
-The next boundary is whether that loss of compositional validity is itself detectable from operational evidence.
+```math
+\boxed{
+\textbf{Does feedback make the future better than it otherwise would have been?}
+}
+```
+
+Everything else serves that question.
