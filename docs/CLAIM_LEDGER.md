@@ -20,7 +20,7 @@ The center of the program is:
 \boxed{I_{\rm adaptive}\propto C_{\rm improve}}
 ```
 
-with:
+with realized causal contribution:
 
 ```math
 \boxed{
@@ -49,6 +49,8 @@ Status: **governing proposal / not a universal established law**.
 Plain language:
 
 > Adaptive intelligence is the capacity to convert feedback into greater future viability than would otherwise be achieved.
+
+`C_improve(t,H,e)` is a realized causal score. Capacity-level claims require an explicitly defined aggregation or robustness statement across relevant futures.
 
 ## A2. Developmental loop
 
@@ -86,13 +88,17 @@ These results protect the interpretation of `C_improve`.
 
 ## B1. Competence and current adaptive contribution are distinct
 
-A frozen system can retain high competence while having little or no current consequence-sensitive adaptive contribution.
+A frozen system can retain high competence while having little or no **current** consequence-sensitive adaptive contribution.
 
 ```math
-\boxed{\text{competence}\neq\text{adaptive intelligence}}
+\boxed{
+\text{competence}
+\neq
+\text{current adaptive contribution}
+}
 ```
 
-Scope: the adaptive-intelligence proposal, not every ordinary use of the word intelligence.
+This does **not** claim that frozen competence is unintelligent in ordinary usage. It only prevents inherited performance from being credited as current `C_improve`.
 
 ## B2. Feedback requires a causal return path
 
@@ -149,15 +155,7 @@ A source can be substantially above chance while its consequence coupling produc
 C_{\rm feedback}<0.
 ```
 
-Therefore:
-
-```math
-\boxed{
-\text{source reliability}
-\neq
-\text{actionable adaptive authority}
-}
-```
+Therefore source-level accuracy is not sufficient evidence for granting feedback-specific causal authority.
 
 ---
 
@@ -307,6 +305,7 @@ Despite changing parameter trajectories, sequencing produced nearly identical la
 \boxed{
 \text{sequencing control demonstrated}
 }
+```
 
 but:
 
@@ -408,7 +407,7 @@ Which mechanisms reliably preserve positive adaptive contribution as horizon, no
 }
 ```
 
-This is one current diagnostic branch.
+This is one current diagnostic branch, not a new program center.
 
 ## E5. Rule-level correction
 
@@ -428,8 +427,10 @@ Do **not** claim from the current evidence:
 
 - that all intelligence is adaptive intelligence;
 - that `I_adaptive ∝ C_improve` is already an established universal scientific law;
+- that high frozen competence implies low ordinary intelligence;
 - that thermostats, evolution, humans, and AI learning are mechanistically identical;
 - that growth is required for positive adaptive contribution;
+- that one favorable realization establishes adaptive capacity across futures;
 - that a frozen baseline is always a sufficient counterfactual;
 - that source accuracy determines authority;
 - that agreement determines corrective authority;
@@ -447,7 +448,22 @@ Do **not** claim from the current evidence:
 
 ---
 
-# G. Current claim ceiling
+# G. Distinction-promotion rule
+
+A new distinction earns promotion into the active empirical model only if it changes at least one of:
+
+1. what intervention is being credited;
+2. what matched counterfactual is required;
+3. what future viability quantity is being measured;
+4. what causal interpretation of `C_improve` is justified.
+
+If it only explains a mechanism after those are fixed, preserve it as subordinate anatomy.
+
+If it changes neither causal measurement nor useful explanation, do not create another branch.
+
+---
+
+# H. Current claim ceiling
 
 The strongest program-level proposal remains:
 
