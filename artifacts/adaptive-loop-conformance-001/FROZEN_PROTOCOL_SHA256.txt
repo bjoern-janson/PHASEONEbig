@@ -1,0 +1,4 @@
+68e34f3c3d21bc7224f96e2c50c0522fecda4646cce9ef5dee75e4da68660cd6  adaptive-loop-protocol-001/protocol.py
+0a34104e2365a1a87fd0d7c63ba4aaa9a90de362f783bccce621c25d30e7add1  adaptive-loop-protocol-001/transition.py
+4fd1e0743e99f6bc01eb9c191e203ff5c2cc206cd0b681157c6c6915112c2d17  adaptive-loop-protocol-001/provenance.py
+6cc9a1c170a95314792de57e61db7ecbacd9c31892156570f38df228006704da  adaptive-loop-protocol-001/tests/test_protocol.py

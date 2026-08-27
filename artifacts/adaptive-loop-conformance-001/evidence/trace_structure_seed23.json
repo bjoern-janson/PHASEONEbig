@@ -1,0 +1,14 @@
+{
+  "domain": "Trace the Ace",
+  "purpose": "conformance success branch; one declared representation change on a fresh session-held-out future",
+  "future": "session-held-out seed 23",
+  "incumbent": "objective-prior representation",
+  "candidate": "objective prior + 13 direct transcript-structure observables",
+  "fixed_predictor": "LogisticRegression(C=0.1, solver=liblinear) for candidate",
+  "incumbent_log_loss": 0.5518725935510772,
+  "candidate_log_loss": 0.5425176010683584,
+  "c_improve": 0.00935499248271876,
+  "candidate_auc": 0.7263037251166405,
+  "n": 7020,
+  "claim_boundary": "Conformance evidence only. This does not alter Groundup-001 or create Groundup-002."
+}

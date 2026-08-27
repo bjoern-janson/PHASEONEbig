@@ -1,0 +1,13 @@
+{
+  "domain": "Trace the Ace",
+  "purpose": "conformance rejection branch",
+  "distinction": "D_objective<->dialogue: how much the completed conversation bears on this particular target objective",
+  "measurement": "one scalar = unique retained objective tokens present in Groundup-001 combined student_tail+tutor_tail / retained objective tokens",
+  "future": "cold52",
+  "incumbent_log_loss": 0.6160420260629641,
+  "candidate_log_loss": 0.6160997555644535,
+  "c_improve": -5.7729501489411916e-05,
+  "n": 6951,
+  "status": "KILL_MEASUREMENT_001_AT_COLD_OBJECTIVE",
+  "claim": "The candidate distinction remains open; this crude lexical-support measurement is not authorized for submission."
+}

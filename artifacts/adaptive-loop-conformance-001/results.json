@@ -1,0 +1,41 @@
+{
+  "artifact": "adaptive-loop-conformance-001",
+  "protocol": "adaptive-loop-protocol-001 (frozen byte-for-byte)",
+  "trace": {
+    "domain": "Trace the Ace",
+    "success": {
+      "inherited": true,
+      "c_improve": 0.00935499248271876,
+      "before_R": "trace-objective-prior",
+      "after_R": "trace-objective-prior-plus-structure",
+      "k_changed": true
+    },
+    "failure": {
+      "inherited": false,
+      "c_improve": -5.7729501489411916e-05,
+      "before_R": "groundup-001",
+      "after_R": "groundup-001",
+      "k_changed": true
+    }
+  },
+  "symbolic_program_repair": {
+    "domain": "symbolic program repair",
+    "success": {
+      "inherited": true,
+      "c_improve": 0.5,
+      "before_R": "program-incumbent-db72c09adeb84ef4",
+      "after_R": "program-parity_repair-b828df0ce391a511",
+      "k_changed": true
+    },
+    "failure": {
+      "inherited": false,
+      "c_improve": 0.0,
+      "before_R": "program-incumbent-db72c09adeb84ef4",
+      "after_R": "program-incumbent-db72c09adeb84ef4",
+      "k_changed": true
+    }
+  },
+  "protocol_edits": false,
+  "conformance_claim": "The unchanged survival-transition protocol can host positive and nonpositive C_improve branches in two different ontologies.",
+  "open_boundary": "The code-level K is an evaluated-transition ledger. Trace K3 also contains diagnostic-only research-state updates that occur without Candidate+Consequence; full research-state K conformance is therefore OPEN and the protocol is not edited here."
+}
