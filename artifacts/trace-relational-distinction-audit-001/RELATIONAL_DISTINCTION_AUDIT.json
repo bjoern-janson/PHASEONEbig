@@ -1,0 +1,343 @@
+{
+  "status": "DISTINGUISH_ONLY_NO_MODEL",
+  "prereg_sha256": "b71a988d87859913e345896c089d56c5144df87eaf9d42e30de6d806923835f1",
+  "incumbent": "Groundup-001 / #20 immutable",
+  "search_state_entering": "K3",
+  "C2_definition": {
+    "same_session": true,
+    "opposite_outcome": true,
+    "exact_combined_lexical_coverage_tie": true,
+    "exact_student_lexical_coverage_tie": true,
+    "exact_tutor_lexical_coverage_tie": true,
+    "frozen_R0_probability_abs_diff_max": 0.05
+  },
+  "population": {
+    "pairs": 163,
+    "sessions": 157,
+    "discovery_pairs": 73,
+    "discovery_sessions": 70,
+    "confirmation_pairs": 90,
+    "confirmation_sessions": 87
+  },
+  "family": [
+    "student_rel_question_to_tutor_rel_response",
+    "tutor_rel_question_to_student_rel_response",
+    "student_return_after_tutor_rel_contrast",
+    "student_entry_after_tutor_rel_contrast",
+    "cross_role_relevant_adjacency_density",
+    "relevance_segment_fragmentation",
+    "student_to_tutor_relevant_proximity",
+    "tutor_to_student_relevant_proximity"
+  ],
+  "multiplicity": "Holm correction across all 8 relations separately within discovery and confirmation; session-level two-sided sign-flip p-values.",
+  "authorization_rule": "ESTABLISHED only if discovery Holm p<0.05 AND confirmation Holm p<0.05 AND same nonzero sign. No model fit.",
+  "results": [
+    {
+      "candidate": "student_rel_question_to_tutor_rel_response",
+      "discovery": {
+        "candidate": "student_rel_question_to_tutor_rel_response",
+        "n_pairs": 73,
+        "n_sessions": 70,
+        "mean_pair_diff": 0.05805609915198957,
+        "mean_session_diff": 0.05340136054421769,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.1232876712328767,
+        "negative_pair_fraction": 0.0273972602739726,
+        "zero_pair_fraction": 0.8493150684931506,
+        "bootstrap95_session_mean": [
+          -0.007142857142857143,
+          0.11870748299319729
+        ],
+        "signflip_p_raw": 0.10687786244275115,
+        "signflip_p_holm": 0.8550228995420092
+      },
+      "confirmation": {
+        "candidate": "student_rel_question_to_tutor_rel_response",
+        "n_pairs": 90,
+        "n_sessions": 87,
+        "mean_pair_diff": 0.013888888888888888,
+        "mean_session_diff": 0.014367816091954023,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.044444444444444446,
+        "negative_pair_fraction": 0.022222222222222223,
+        "zero_pair_fraction": 0.9333333333333333,
+        "bootstrap95_session_mean": [
+          -0.034482758620689655,
+          0.06609195402298851
+        ],
+        "signflip_p_raw": 0.6879062418751625,
+        "signflip_p_holm": 1.0
+      },
+      "status": "NOT ESTABLISHED"
+    },
+    {
+      "candidate": "tutor_rel_question_to_student_rel_response",
+      "discovery": {
+        "candidate": "tutor_rel_question_to_student_rel_response",
+        "n_pairs": 73,
+        "n_sessions": 70,
+        "mean_pair_diff": -0.005609012872891749,
+        "mean_session_diff": -0.003723548798736769,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.1095890410958904,
+        "negative_pair_fraction": 0.1917808219178082,
+        "zero_pair_fraction": 0.6986301369863014,
+        "bootstrap95_session_mean": [
+          -0.030814602325410598,
+          0.024140353172308046
+        ],
+        "signflip_p_raw": 0.8008239835203296,
+        "signflip_p_holm": 1.0
+      },
+      "confirmation": {
+        "candidate": "tutor_rel_question_to_student_rel_response",
+        "n_pairs": 90,
+        "n_sessions": 87,
+        "mean_pair_diff": 0.01509700176366843,
+        "mean_session_diff": 0.010965152344462686,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.2,
+        "negative_pair_fraction": 0.12222222222222222,
+        "zero_pair_fraction": 0.6777777777777778,
+        "bootstrap95_session_mean": [
+          -0.0317198047801496,
+          0.052814785788923714
+        ],
+        "signflip_p_raw": 0.6206475870482591,
+        "signflip_p_holm": 1.0
+      },
+      "status": "NOT ESTABLISHED"
+    },
+    {
+      "candidate": "student_return_after_tutor_rel_contrast",
+      "discovery": {
+        "candidate": "student_return_after_tutor_rel_contrast",
+        "n_pairs": 73,
+        "n_sessions": 70,
+        "mean_pair_diff": 0.0005055446836268736,
+        "mean_session_diff": -0.0021315192743764184,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.0410958904109589,
+        "negative_pair_fraction": 0.0684931506849315,
+        "zero_pair_fraction": 0.8904109589041096,
+        "bootstrap95_session_mean": [
+          -0.047286706349206356,
+          0.059801587301587286
+        ],
+        "signflip_p_raw": 0.9691406171876562,
+        "signflip_p_holm": 1.0
+      },
+      "confirmation": {
+        "candidate": "student_return_after_tutor_rel_contrast",
+        "n_pairs": 90,
+        "n_sessions": 87,
+        "mean_pair_diff": -0.01604938271604938,
+        "mean_session_diff": -0.016602809706257986,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.022222222222222223,
+        "negative_pair_fraction": 0.07777777777777778,
+        "zero_pair_fraction": 0.9,
+        "bootstrap95_session_mean": [
+          -0.0590676883780332,
+          0.024904214559386975
+        ],
+        "signflip_p_raw": 0.47315053698926024,
+        "signflip_p_holm": 1.0
+      },
+      "status": "NOT ESTABLISHED"
+    },
+    {
+      "candidate": "student_entry_after_tutor_rel_contrast",
+      "discovery": {
+        "candidate": "student_entry_after_tutor_rel_contrast",
+        "n_pairs": 73,
+        "n_sessions": 70,
+        "mean_pair_diff": -0.0035198327326180345,
+        "mean_session_diff": -0.0011789444123128478,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.3424657534246575,
+        "negative_pair_fraction": 0.3424657534246575,
+        "zero_pair_fraction": 0.3150684931506849,
+        "bootstrap95_session_mean": [
+          -0.0253712053222276,
+          0.022830092955799856
+        ],
+        "signflip_p_raw": 0.9255814883702326,
+        "signflip_p_holm": 1.0
+      },
+      "confirmation": {
+        "candidate": "student_entry_after_tutor_rel_contrast",
+        "n_pairs": 90,
+        "n_sessions": 87,
+        "mean_pair_diff": 0.0054577501864065,
+        "mean_session_diff": 0.00306556031386414,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.34444444444444444,
+        "negative_pair_fraction": 0.26666666666666666,
+        "zero_pair_fraction": 0.3888888888888889,
+        "bootstrap95_session_mean": [
+          -0.03970355185511005,
+          0.04267230519678807
+        ],
+        "signflip_p_raw": 0.8864422711545769,
+        "signflip_p_holm": 1.0
+      },
+      "status": "NOT ESTABLISHED"
+    },
+    {
+      "candidate": "cross_role_relevant_adjacency_density",
+      "discovery": {
+        "candidate": "cross_role_relevant_adjacency_density",
+        "n_pairs": 73,
+        "n_sessions": 70,
+        "mean_pair_diff": 0.001136233864469851,
+        "mean_session_diff": 0.001166846418878414,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.2328767123287671,
+        "negative_pair_fraction": 0.1917808219178082,
+        "zero_pair_fraction": 0.5753424657534246,
+        "bootstrap95_session_mean": [
+          -0.0013394582947012003,
+          0.0043367076672996534
+        ],
+        "signflip_p_raw": 0.497470050598988,
+        "signflip_p_holm": 1.0
+      },
+      "confirmation": {
+        "candidate": "cross_role_relevant_adjacency_density",
+        "n_pairs": 90,
+        "n_sessions": 87,
+        "mean_pair_diff": 0.0008891377386132043,
+        "mean_session_diff": 0.0007384373339446338,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.3,
+        "negative_pair_fraction": 0.2111111111111111,
+        "zero_pair_fraction": 0.4888888888888889,
+        "bootstrap95_session_mean": [
+          -0.0015886368580856223,
+          0.0028711292374968165
+        ],
+        "signflip_p_raw": 0.5348293034139318,
+        "signflip_p_holm": 1.0
+      },
+      "status": "NOT ESTABLISHED"
+    },
+    {
+      "candidate": "relevance_segment_fragmentation",
+      "discovery": {
+        "candidate": "relevance_segment_fragmentation",
+        "n_pairs": 73,
+        "n_sessions": 70,
+        "mean_pair_diff": 0.011122370773572322,
+        "mean_session_diff": 0.005086283311406787,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.2191780821917808,
+        "negative_pair_fraction": 0.3698630136986301,
+        "zero_pair_fraction": 0.410958904109589,
+        "bootstrap95_session_mean": [
+          -0.03545658121131402,
+          0.051562433580891846
+        ],
+        "signflip_p_raw": 0.8308633827323454,
+        "signflip_p_holm": 1.0
+      },
+      "confirmation": {
+        "candidate": "relevance_segment_fragmentation",
+        "n_pairs": 90,
+        "n_sessions": 87,
+        "mean_pair_diff": -0.011770079975446324,
+        "mean_session_diff": -0.013596554843485554,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.3,
+        "negative_pair_fraction": 0.37777777777777777,
+        "zero_pair_fraction": 0.32222222222222224,
+        "bootstrap95_session_mean": [
+          -0.0671897371387336,
+          0.04075824305706472
+        ],
+        "signflip_p_raw": 0.6333273334533309,
+        "signflip_p_holm": 1.0
+      },
+      "status": "NOT ESTABLISHED"
+    },
+    {
+      "candidate": "student_to_tutor_relevant_proximity",
+      "discovery": {
+        "candidate": "student_to_tutor_relevant_proximity",
+        "n_pairs": 73,
+        "n_sessions": 70,
+        "mean_pair_diff": 0.003989911156005357,
+        "mean_session_diff": 0.0031183746874483957,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.4246575342465753,
+        "negative_pair_fraction": 0.2328767123287671,
+        "zero_pair_fraction": 0.3424657534246575,
+        "bootstrap95_session_mean": [
+          -0.03601150153891714,
+          0.04162553835645743
+        ],
+        "signflip_p_raw": 0.875422491550169,
+        "signflip_p_holm": 1.0
+      },
+      "confirmation": {
+        "candidate": "student_to_tutor_relevant_proximity",
+        "n_pairs": 90,
+        "n_sessions": 87,
+        "mean_pair_diff": 0.015198253035407474,
+        "mean_session_diff": 0.009158747438562376,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.4111111111111111,
+        "negative_pair_fraction": 0.37777777777777777,
+        "zero_pair_fraction": 0.2111111111111111,
+        "bootstrap95_session_mean": [
+          -0.029131752499769334,
+          0.047067654441181606
+        ],
+        "signflip_p_raw": 0.6395472090558189,
+        "signflip_p_holm": 1.0
+      },
+      "status": "NOT ESTABLISHED"
+    },
+    {
+      "candidate": "tutor_to_student_relevant_proximity",
+      "discovery": {
+        "candidate": "tutor_to_student_relevant_proximity",
+        "n_pairs": 73,
+        "n_sessions": 70,
+        "mean_pair_diff": -0.0013739721048776975,
+        "mean_session_diff": -0.00042008443846982705,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.3698630136986301,
+        "negative_pair_fraction": 0.3835616438356164,
+        "zero_pair_fraction": 0.2465753424657534,
+        "bootstrap95_session_mean": [
+          -0.016134796568912955,
+          0.015365788019292441
+        ],
+        "signflip_p_raw": 0.9593208135837283,
+        "signflip_p_holm": 1.0
+      },
+      "confirmation": {
+        "candidate": "tutor_to_student_relevant_proximity",
+        "n_pairs": 90,
+        "n_sessions": 87,
+        "mean_pair_diff": -0.00025535832906312795,
+        "mean_session_diff": -0.0019162986845575446,
+        "median_pair_diff": 0.0,
+        "positive_pair_fraction": 0.4444444444444444,
+        "negative_pair_fraction": 0.34444444444444444,
+        "zero_pair_fraction": 0.2111111111111111,
+        "bootstrap95_session_mean": [
+          -0.02252332829486381,
+          0.01789850587935819
+        ],
+        "signflip_p_raw": 0.8563028739425211,
+        "signflip_p_holm": 1.0
+      },
+      "status": "NOT ESTABLISHED"
+    }
+  ],
+  "established_D2": [],
+  "next_state": "No D2 authorized; R0 remains frozen and K3 may advance to K4 with this negative family result",
+  "claim_boundary": "Observational diagnostic inside C2. Does not itself establish positive C_improve."
+}
