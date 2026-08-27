@@ -4,6 +4,15 @@
 
 Preregistration SHA-256: `b71a988d87859913e345896c089d56c5144df87eaf9d42e30de6d806923835f1`
 Result JSON SHA-256: `fd8b6c874d0094a35d89191888c4d70aa56a90275dca20feac101757c656a24a`
+Recovered source SHA-256: `f266f463c2b2f6e213c4b461be0ca4960a845bfdef341112eda8a54c9917cba4`
+
+## Source provenance repair
+
+The first public Git copy of `relational_distinction_audit.py` was later found to be corrupted and non-executable as written. The exact clean source artifact preserved outside that corrupted Git copy was recovered and restored without changing the preregistration, result JSON, statistical family, or K4 scientific conclusion.
+
+The recovered source passes Python syntax compilation. A fresh post-repair regeneration of the result JSON is **not claimed here**, because the original Trace runtime inputs required by the script are not present in the current recovery environment. The frozen result JSON therefore remains the authoritative result artifact pending any future environment-complete rerun.
+
+This is an execution/provenance repair only. It does not advance or reopen `K4` by itself.
 
 ## Question
 
