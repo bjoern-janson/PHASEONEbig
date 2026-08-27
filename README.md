@@ -278,6 +278,7 @@ The center remains almost embarrassingly small:
 ```math
 \boxed{
 \textbf{Does adaptive feedback make the future better than it otherwise would have been?}
+}
 ```
 
 Everything else serves that question.
