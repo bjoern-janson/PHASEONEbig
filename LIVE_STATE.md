@@ -418,7 +418,81 @@ This repository is the durable research lineage unless/until a more appropriate 
 
 ---
 
-## 9. Current claim ceiling and next allowed work
+## 9. Method / protocol / research-state separation
+
+A program-level methodological clarification has been added without changing the conceptual core or PROTOCOL-001.
+
+The three layers are:
+
+```text
+METHOD
+    interrogate the object
+    ↓
+    constitute the next distinction/transformation
+
+PROTOCOL
+    expose candidate to a declared independent future
+    ↓
+    compute C_improve
+    ↓
+    inherit / reject
+
+RESEARCH STATE
+    preserve consequence
+    ↓
+    localize failure
+    ↓
+    change the next question
+```
+
+The methodological spine is:
+
+```math
+\boxed{\text{interrogate}\rightarrow\text{constitute}\rightarrow\text{transform}\rightarrow\text{independent future}\rightarrow C_{\rm improve}\rightarrow\text{inherit/reject}\rightarrow\text{revise the next question}}
+```
+
+This does **not** replace the original developmental loop. It is an operational discipline for entering and traversing it without granting optimization premature authority.
+
+The deepest methodological rule is:
+
+```math
+\boxed{\textbf{Revision depth must match failure depth.}}
+```
+
+Distinguish at least:
+
+```text
+failure of execution      -> repair/simplify implementation
+failure of representation -> abandon/reconsider that representation or measurement
+failure of constitution   -> change the question/object; do not optimize it
+```
+
+Do not infer a deeper failure than the evidence warrants, and do not respond to a deep failure with shallow optimization.
+
+Consequences improve the research process only when they change what questions or distinctions are admissible next. Merely logging failure without changing future search behavior is bookkeeping, not meaningful research adaptation.
+
+A useful compression is:
+
+> **A research system does not become more adaptive by accumulating more transformations. It becomes more adaptive when consequences improve the questions from which later transformations are constituted.**
+
+Anti-sunk-cost rule:
+
+> **A failed object does not earn additional authority or complexity merely because effort has already been invested in it.**
+
+Anti-bureaucracy gate for any proposed universal machinery:
+
+```math
+\boxed{\textbf{Does this machinery change what survives, or does it merely describe the machinery?}}
+```
+
+- If it changes the admissibility or survival conditions of adaptive change, it may be a candidate protocol concern and must earn that promotion empirically.
+- If it only describes how questions are constituted, failures are localized, or search proceeds, keep it in method/provenance/research-state notes unless further evidence demands otherwise.
+
+This clarification does **not** authorize `protocol-002` and does **not** change Trace `K3` or Groundup-001.
+
+---
+
+## 10. Current claim ceiling and next allowed work
 
 Earned:
 
@@ -426,6 +500,7 @@ Earned:
 - Trace research/search state has advanced to `K3` through negative and diagnostic evidence without authorizing Groundup-002.
 - PROTOCOL-001 enforces a narrow survival-transition bookkeeping contract.
 - The unchanged protocol conformed to Trace and symbolic program repair for positive and nonpositive `C_improve` branches.
+- The method/protocol/research-state separation is a current operating discipline, not a new theory or protocol primitive.
 
 Not earned:
 
