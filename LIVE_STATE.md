@@ -1,6 +1,6 @@
 # LIVE STATE — recovery spine
 
-**Status:** authoritative recovery checkpoint after `RELATIONAL_DISTINCTION_AUDIT` on 2026-08-27.
+**Status:** authoritative recovery checkpoint after `EVENT_IDENTITY_AUDIT_001` on 2026-08-27.
 
 Read this first if conversational state is lost. Detailed earlier lineage remains in Git history at commit `b92d44f5b83307578c302770ebee6b87b8d13b70` and in the preserved artifacts referenced below.
 
@@ -91,7 +91,7 @@ Residual-collision role audit: marginal student/tutor lexical decompositions did
 
 Relational-collision audit on 163 hard pairs / 157 sessions tested four primitive lexical-order relations. None replicated strongly enough to authorize `D2`.
 
-### K4 — current
+### K4
 
 `RELATIONAL_DISTINCTION_AUDIT` preregistered a broader eight-relation primitive event family before outcomes were inspected.
 
@@ -158,7 +158,115 @@ This does **not** establish that interaction, sequence, or the session-objective
 
 Next legal Trace operation remains **DISTINGUISH**, not TRANSFORM.
 
-## Audit artifacts
+### K5 — current
+
+`EVENT_IDENTITY_AUDIT_001` interrogated the upstream unit of event rather than adding a more complicated relation.
+
+The audit explicitly did **not** define event relevance as target-objective token overlap. Transcript turns were first assigned target-independent mathematical-act identities; target objectives were separately assigned act-demand identities. The only match occurred at the predeclared category level.
+
+The admissible event identities were selected by outcome-blind C2 support and frozen before outcome inspection:
+
+1. add / subtract;
+2. multiply / divide;
+3. fraction / ratio;
+4. decimal;
+5. comparison / order;
+6. money;
+7. geometry.
+
+The preregistered diagnostic family contained nine quantities:
+
+- student composite event-identity alignment;
+- tutor composite event-identity alignment;
+- seven student form-specific alignments.
+
+The same C2 population and discovery/confirmation split were used:
+
+```text
+163 pairs / 157 sessions
+discovery:    73 pairs / 70 sessions
+confirmation: 90 pairs / 87 sessions
+```
+
+Inference remained session-clustered with 10,000 bootstrap resamples, 50,000 two-sided sign-flip draws, and Holm correction across all nine candidates separately within discovery and confirmation.
+
+**Result:** no candidate event-identity dependency was established.
+
+Composite results:
+
+```text
+student event-identity alignment
+  discovery    delta = -0.002918, 95% CI [-0.013571,+0.007082], Holm p=1.0
+  confirmation delta = -0.000727, 95% CI [-0.010824,+0.009207], Holm p=1.0
+
+tutor event-identity alignment
+  discovery    delta = +0.007588, 95% CI [-0.005943,+0.021523], Holm p=1.0
+  confirmation delta = +0.001623, 95% CI [-0.011370,+0.014204], Holm p=1.0
+```
+
+The strongest discovery-side form-specific signal was student money alignment:
+
+```text
+discovery    delta = +0.001133, 95% CI [+0.000058,+0.002528], Holm p=0.837883
+confirmation delta = +0.002089, 95% CI [-0.000474,+0.006160], Holm p=1.0
+```
+
+Therefore:
+
+```math
+\boxed{(R_0,K_4)\rightarrow(R_0,K_5)}
+```
+
+```text
+ESTABLISHED D2: none
+R state: Groundup-001 / #20 unchanged
+Groundup-002: not authorized
+```
+
+Earned K5 statement:
+
+> Primitive target-independent mathematical-act event identity, aligned to target-objective demand at the category level, did not reproducibly distinguish the current hardest residual futures.
+
+This rejects only this event constitution. It does **not** establish that event identity, semantics, or the unresolved session-objective dependency is irrelevant.
+
+The failure localization is now sharper:
+
+```text
+lexical content amount              -> insufficient
+speaker lexical decomposition       -> insufficient
+lexical event relations             -> insufficient
+primitive mathematical-act identity -> insufficient
+```
+
+The next legal operation remains **DISTINGUISH**, not TRANSFORM. The open question must move deeper than either target-word relevance or this hand-constituted mathematical-act taxonomy.
+
+## Event-identity audit artifacts
+
+Preserve under:
+
+```text
+artifacts/trace-event-identity-audit-001/
+  EVENT_IDENTITY_AUDIT_PREREG.md
+  event_identity_audit.py
+  EVENT_IDENTITY_AUDIT.json
+  EVENT_IDENTITY_AUDIT.md
+```
+
+Preregistration SHA-256:
+
+```text
+e646a81ea0eed9da13b4750daa9dcfe1d75edbc7cf4c369a1ec6794a49ad13d7
+```
+
+Result JSON SHA-256:
+
+```text
+567d343a63057d537522ea9acd0e89a7eb425f1a595663fc553328819ca6dea1
+```
+
+A deterministic rerun reproduced the exact result JSON hash.
+
+## K4 relational-audit artifacts
 
 Preserve under:
 
@@ -208,7 +316,7 @@ It passed Trace + symbolic program repair without a protocol edit. `protocol-002
 
 ## Open K boundary
 
-PROTOCOL-001's code-level `K` is an evaluated-transition ledger. Trace `K4` also contains diagnostic-only updates that changed the next question without Candidate + Consequence transitions.
+PROTOCOL-001's code-level `K` is an evaluated-transition ledger. Trace `K5` also contains diagnostic-only updates that changed the next question without Candidate + Consequence transitions.
 
 Still OPEN:
 
@@ -228,10 +336,10 @@ Persist correction-relevant lineage, not scratch accumulation.
 Earned:
 
 - Groundup-001 remains frozen #20 incumbent;
-- Trace search state is now `K4`;
+- Trace search state is now `K5`;
 - no `D2` is identified;
 - no Groundup-002 is authorized;
-- eight-family relational distinction audit is a negative result with preregistration, multiplicity control, and independent confirmation;
+- eight-family relational distinction audit and nine-family event-identity audit are negative results with preregistration, multiplicity control, and independent confirmation;
 - PROTOCOL-001 remains frozen;
 - METHOD / PROTOCOL / RESEARCH STATE remain separate.
 
