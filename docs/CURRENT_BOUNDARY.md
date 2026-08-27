@@ -1,8 +1,8 @@
 # Current Empirical Boundary
 
-This document records the **current diagnostic boundary inside the larger `C_improve` program**.
+This document records one **current diagnostic boundary inside the larger `C_improve` program**.
 
-It is not the definition of adaptive intelligence and it is not the repository's top-level purpose.
+It is not the definition of adaptive intelligence, and it is not the repository's top-level purpose.
 
 The main object remains:
 
@@ -12,7 +12,7 @@ I_{\rm adaptive}\propto C_{\rm improve}
 }
 ```
 
-with:
+with realized causal contribution:
 
 ```math
 \boxed{
@@ -24,7 +24,9 @@ V_H(S_t^{\mathrm{ctrl}(AF)};e)
 }
 ```
 
-The current boundary exists because one predecessor failure mode revealed a gap between locally justified corrections and the realized long-horizon value of repeatedly applying the correction policy.
+This branch exists because one predecessor failure mode revealed a gap between locally justified corrections and the realized long-horizon value of repeatedly applying the correction policy.
+
+It remains worth pursuing only while it adds information about, or leverage over, long-horizon `C_improve`.
 
 ---
 
@@ -79,10 +81,10 @@ and:
 
 ```math
 A_{\rm policy}:
-\text{Does repeatedly granting authority according to this rule improve the future?}
+\text{Does repeated use of this authority rule produce positive }C_{\rm improve}\text{ over the relevant horizon?}
 ```
 
-This distinction matters because the second question is ultimately judged by `C_improve`, not by the apparent sophistication of the local rule.
+The second question is judged by the matched-counterfactual future difference, not by the apparent sophistication of the local rule.
 
 ---
 
@@ -116,9 +118,7 @@ The clean statement is:
 
 ---
 
-# One current diagnostic question
-
-A natural next assay is:
+# Current diagnostic question
 
 ```math
 \boxed{
@@ -126,11 +126,11 @@ A natural next assay is:
 }
 ```
 
-This is a diagnostic question because a successful answer could help explain or improve long-horizon `C_improve`.
+This is worth testing because a positive answer could improve explanation or control of long-horizon `C_improve`.
 
 It is not the new foundation of the program.
 
-`OPEN` means **not yet tested**.
+Status: **OPEN / untested**.
 
 ---
 
@@ -160,11 +160,11 @@ C_{\rm realized}^{(t)}
 }
 ```
 
-But a live monitor may not receive unavailable oracle-local values or future viability.
+But a live diagnostic may not receive unavailable oracle-local values or future viability.
 
 Those remain evaluation targets only.
 
-Any operational monitor must obey:
+Any operational estimator must obey:
 
 ```math
 \boxed{
@@ -172,7 +172,7 @@ Any operational monitor must obey:
 \rightarrow
 \widehat D_t
 \rightarrow
-\text{monitor output}_t
+\text{diagnostic output}_t
 }
 ```
 
@@ -182,7 +182,7 @@ with future/oracle outcomes used only afterward for scoring.
 
 # First assay: prediction before intervention
 
-The first self-monitoring experiment, if run, should ask only whether online-available history predicts impending deterioration beyond cheap baselines.
+If this branch is pursued, the first experiment should ask only whether online-available history predicts impending deterioration beyond cheap baselines.
 
 Possible targets:
 
@@ -202,7 +202,7 @@ At minimum compare against:
 - model-state summaries legitimately observable online;
 - recent realized-loss trends when genuinely available.
 
-A complicated monitor earns nothing if time or update count explains the same signal.
+A complicated estimator earns nothing if time or update count explains the same signal.
 
 ---
 
@@ -242,6 +242,8 @@ The failure could mean:
 
 Localize before repairing.
 
+If the branch ceases to change what can be measured, predicted, or controlled about `C_improve`, close it rather than promoting more explanatory machinery.
+
 ---
 
 # Relation to the developmental loop
@@ -262,9 +264,9 @@ The program-level loop remains:
 }
 ```
 
-The current composition failure is one way that apparent success at `transform` can fail to produce a better `continue → distinguish better` trajectory.
+The composition failure is one way that apparent success at `transform` can fail to produce a better `continue → distinguish better` trajectory.
 
-A self-monitor would therefore be one possible mechanism for detecting that the loop's current transformation rule is no longer producing positive future value.
+A deterioration detector would therefore be one possible mechanism for noticing that the current transformation rule is no longer producing positive future value.
 
 Again: mechanism, not definition.
 
